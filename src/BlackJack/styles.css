@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #154734;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  background: #1b3d2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: min(90%, 700px);
+  text-align: center;
+}
+
+h1 {
+  color: gold;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+h2 {
+  color: #ffdd57;
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+.cards {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 0.3rem 0;
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 48px;
+  height: 64px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.1s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.controls button, .bet-button, #clear-bet {
+  background: gold;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 0 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.controls button:hover, .bet-button:hover, #clear-bet:hover {
+  background: #ffd700;
+}
+
+.bet-button, #clear-bet {
+  background: #28a745;
+  color: #fff;
+}
+
+.bet-button:hover, #clear-bet:hover {
+  background: #218838;
+}
+
+.bet-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 0.3rem 0;
+}
+
+#message {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.balance {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}

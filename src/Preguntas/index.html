@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Casino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen flex items-start p-6 bg-gradient-to-br from-gray-900 to-gray-800 font-poppins">
+    <div class="flex w-full max-w-6xl mx-auto space-x-6">
+        <!-- Sidebar -->
+        <div class="sidebar w-72 space-y-8 p-6 rounded-2xl shadow-2xl">
+            <div>
+                <h2 class="text-xl font-bold text-neon-green underline decoration-2">Estado del Juego</h2>
+                <p id="balance" class="mt-3 text-gray-300">Saldo: $10000</p>
+                <p id="bet" class="mt-2 text-gray-300">Apuesta Actual: $0</p>
+                <p id="multiplier" class="mt-2 text-gray-300">Multiplicador: x1.10</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-neon-green underline decoration-2">Estadísticas</h2>
+                <p id="winnings" class="mt-3 text-gray-300">Ganancias Totales: $0</p>
+                <p id="wins" class="mt-2 text-gray-300">Victorias Seguidas: 0</p>
+                <p id="answered" class="mt-2 text-gray-300">Preguntas Respondidas: 0</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-neon-green underline decoration-2">Apuestas</h2>
+                <div class="flex flex-wrap gap-3 mt-3">
+                    <button onclick="addToBet(1)" class="modal-btn w-16" aria-label="Apostar 1 peso">+$1</button>
+                    <button onclick="addToBet(10)" class="modal-btn w-16" aria-label="Apostar 10 pesos">+$10</button>
+                    <button onclick="addToBet(50)" class="modal-btn w-16" aria-label="Apostar 50 pesos">+$50</button>
+                    <button onclick="addToBet(100)" class="modal-btn w-20" aria-label="Apostar 100 pesos">+$100</button>
+                </div>
+                <button onclick="clearBet()" class="modal-btn w-full mt-4 clear-bet" aria-label="Limpiar apuesta">Limpiar Apuesta</button>
+                <button onclick="startNewGame()" class="modal-btn w-full mt-3 start-game" aria-label="Comenzar juego">Comenzar Juego</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Waiting State -->
+            <div id="waiting-state" class="waiting-state text-center p-8 rounded-2xl shadow-2xl animate-fade-in">
+                <h1 class="text-4xl font-bold text-neon-green">¡Bienvenido al Trivia Casino!</h1>
+                <p class="mt-6 text-gray-400 max-w-lg mx-auto">
+                    Haz tu apuesta y demuestra tu conocimiento.<br>
+                    Responde 5 preguntas correctas para ganar.<br>
+                    ¡Elige continuar o retirar tras cada ronda!
+                </p>
+            </div>
+
+            <!-- Game Area -->
+            <div id="game-area" class="game-area hidden space-y-6 p-8 rounded-2xl shadow-2xl">
+                <div class="question-header flex justify-between items-center p-4 rounded-xl">
+                    <span id="question-number" class="text-lg text-gray-200">Pregunta 1 de 5</span>
+                    <span id="timer" class="timer text-xl text-neon-green">5</span>
+                </div>
+                <div id="question-text" class="question-text text-lg text-gray-200 p-5 rounded-xl animate-fade-in"></div>
+                <div id="options" class="space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden animate-modal-in">
+        <div id="modal-content" class="modal p-6 max-w-md w-full text-center space-y-5 rounded-2xl shadow-xl animate-modal-pop">
+            <!-- Contenido dinámico -->
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

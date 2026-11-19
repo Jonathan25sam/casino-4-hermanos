@@ -1,0 +1,199 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nfsb://.netbeans.org/projects/68e0f4e6-0e8f-4b7e-8c9f-5f9b2f3a1e3d/src/GUI/casino.css to edit this template
+*/
+ /* 
+    Created on : May 4, 2025, 8:31:10 PM
+    Author     : ricar
+/* ======================= */
+/*       ESTILOS BASE      */
+/* ======================= */
+.root {
+    -fx-background-color: #1e1e1e; /* Fondo oscuro para la raíz */
+}
+
+/* ======================= */
+/*    CONTENEDOR SUPERIOR  */
+/* ======================= */
+.top-container {
+    -fx-background-color: #1e1e1e; /* Fondo oscuro para el contenedor superior */
+    -fx-border-color: #333333; /* Color de borde gris oscuro */
+    -fx-border-width: 0 0 2px 0; /* Borde solo en la parte inferior */
+}
+
+/* ======================= */
+/*         TÍTULO          */
+/* ======================= */
+.title {
+    -fx-text-fill: linear-gradient(to right, #f8d347, white); /* Gradiente de color para el texto */
+    -fx-font-size: 36px; /* Tamaño de fuente más pequeño */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-font-family: 'Arial Black', sans-serif; /* Fuente específica */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 5, 0.5, 0, 1); /* Sombra en el texto */
+    -fx-text-alignment: center; /* Alineación del texto al centro */
+    -fx-alignment: center; /* Alineación centrada para el contenedor */
+}
+
+/* ======================= */
+/*     CONTROLES SUPERIORES*/
+/* ======================= */
+.menu-btn {
+    -fx-background-color: #2e2e2e; /* Fondo oscuro para los botones */
+    -fx-text-fill: #cccccc; /* Color de texto gris claro */
+    -fx-font-size: 16px; /* Tamaño de fuente más pequeño */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-background-radius: 18px; /* Bordes más pequeños */
+    -fx-padding: 8px 20px; /* Espaciado interno más pequeño */
+    -fx-cursor: hand; /* Cursor tipo mano cuando se pasa por encima */
+    -fx-border-color: transparent; /* Borde transparente */
+}
+
+.menu-btn:hover {
+    -fx-text-fill: #f8d347; /* Color de texto cuando el botón es hover (pasado por encima) */
+}
+
+.menu-btn.selected {
+    -fx-background-color: #f8d347; /* Fondo amarillo cuando el botón está seleccionado */
+    -fx-text-fill: black; /* Texto negro cuando el botón está seleccionado */
+}
+
+/* ======================= */
+/*     BOTÓN CERRAR SESIÓN */
+/* ======================= */
+.logout-btn {
+    -fx-background-color: #dc3545; /* Fondo rojo oscuro, igual que el botón de retirar */
+    -fx-text-fill: white; /* Texto blanco */
+    -fx-font-size: 16px; /* Tamaño de fuente igual que los otros botones */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-background-radius: 18px; /* Bordes redondeados */
+    -fx-padding: 8px 20px; /* Espaciado interno igual */
+    -fx-cursor: hand; /* Cursor tipo mano */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 4, 0.5, 0, 1); /* Sombra igual */
+}
+
+.logout-btn:hover {
+    -fx-background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+    -fx-text-fill: #ffffff; /* Blanco brillante */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 6, 0.5, 0, 2); /* Sombra más pronunciada al hover */
+}
+
+/* ======================= */
+/*     BALANCE LABEL       */
+/* ======================= */
+.balance-label {
+    -fx-text-fill: #f8d347; /* Color del texto en amarillo */
+    -fx-font-size: 32px; /* Tamaño de la fuente más grande */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-alignment: center; /* Alineación centrada */
+    -fx-min-width: 200px; /* Ancho mínimo para permitir que el número ocupe más espacio */
+    -fx-max-width: 400px; /* Ancho máximo más grande para el balance */
+    -fx-pref-width: 300px; /* Ancho preferido más grande para que sea más visible */
+    -fx-padding: 10px 20px; /* Espaciado interno para mayor confort */
+    -fx-wrap-text: true; /* Permitir que el texto se envuelva si es necesario */
+}
+
+/* ======================= */
+/*     BOTONES DINERO      */
+/* ======================= */
+.deposit-btn, .withdraw-btn {
+    -fx-text-fill: white; /* Color de texto blanco */
+    -fx-font-size: 16px; /* Tamaño de la fuente más pequeño */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-background-radius: 18px; /* Bordes más pequeños */
+    -fx-padding: 8px 20px; /* Espaciado interno más pequeño */
+    -fx-cursor: hand; /* Cursor tipo mano */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 4, 0.5, 0, 1); /* Sombra sutil */
+}
+
+.deposit-btn {
+    -fx-background-color: #3fcf72; /* Fondo verde para el botón de depósito */
+}
+
+.deposit-btn:hover {
+    -fx-background-color: #2fb65c; /* Verde más oscuro al hover */
+}
+
+.withdraw-btn {
+    -fx-background-color: #e15e5e; /* Fondo rojo para el botón de retiro */
+}
+
+.withdraw-btn:hover {
+    -fx-background-color: #c64545; /* Rojo más oscuro al hover */
+}
+
+/* ======================= */
+/*     CONTENIDO CENTRAL   */
+/* ======================= */
+.scroll-pane {
+    -fx-background-color: transparent; /* Fondo transparente para el área de desplazamiento */
+}
+
+.games-grid {
+    -fx-hgap: 20px; /* Espacio horizontal más pequeño entre los elementos */
+    -fx-vgap: 20px; /* Espacio vertical más pequeño entre los elementos */
+    -fx-padding: 20px; /* Espaciado interno más pequeño en la cuadrícula de juegos */
+    -fx-alignment: top-center; /* Alineación de los juegos en la parte superior y centrado */
+}
+
+/* ======================= */
+/*    TARJETAS DE JUEGO    */
+/* ======================= */
+.game-section {
+    -fx-background-color: #2c2c2c; /* Fondo oscuro para las tarjetas de juego */
+    -fx-padding: 15px; /* Espaciado interno de las tarjetas más pequeño */
+    -fx-spacing: 12px; /* Espaciado más pequeño entre los elementos dentro de la tarjeta */
+    -fx-min-width: 250px; /* Ancho mínimo de la tarjeta más pequeño */
+    -fx-max-width: 270px; /* Ancho máximo de la tarjeta más pequeño */
+    -fx-background-radius: 18px; /* Bordes más pequeños en las tarjetas */
+    -fx-effect: dropshadow(gaussian, #000000, 12, 0.2, 0, 5); /* Sombra más sutil para las tarjetas */
+    -fx-alignment: center; /* Alineación centrada del contenido dentro de la tarjeta */
+}
+
+.game-title {
+    -fx-text-fill: #f8d347; /* Título en color amarillo */
+    -fx-font-size: 20px; /* Tamaño de fuente del título más pequeño */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-wrap-text: true; /* Permitir que el texto se envuelva */
+    -fx-text-alignment: center; /* Alineación centrada del texto */
+    -fx-alignment: center; /* Alineación centrada */
+    -fx-max-width: 220px; /* Máximo ancho del título más pequeño */
+}
+
+.game-desc {
+    -fx-text-fill: #aaaaaa; /* Descripción en color gris claro */
+    -fx-font-size: 12px; /* Tamaño de la fuente de la descripción más pequeño */
+    -fx-text-alignment: center; /* Alineación centrada */
+    -fx-alignment: center; /* Alineación centrada */
+    -fx-max-width: 220px; /* Máximo ancho de la descripción más pequeño */
+    -fx-wrap-text: true; /* Permitir que el texto se envuelva */
+}
+
+/* ======================= */
+/*      BOTÓN JUGAR        */
+/* ======================= */
+.play-btn {
+    -fx-background-color: #ffd700; /* Fondo amarillo para el botón de jugar */
+    -fx-text-fill: black; /* Texto negro */
+    -fx-font-weight: bold; /* Fuente en negrita */
+    -fx-font-size: 14px; /* Tamaño de la fuente más pequeño */
+    -fx-padding: 8px 20px; /* Espaciado interno del botón más pequeño */
+    -fx-background-radius: 25px; /* Bordes más pequeños */
+    -fx-cursor: hand; /* Cursor tipo mano */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 4, 0.5, 0, 1); /* Sombra más sutil en el botón */
+}
+
+.play-btn:hover {
+    -fx-background-color: #ffcc00; /* Cambiar fondo a amarillo más claro cuando se pasa el mouse por encima */
+}
+
+/* ======================= */
+/*    EFECTOS DE IMAGEN    */
+/* ======================= */
+.game-section ImageView {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 2); /* Efecto de sombra más sutil para las imágenes */
+}
+
+.game-section:hover ImageView {
+    -fx-scale-x: 1.05; /* Aumentar el tamaño horizontal de la imagen */
+    -fx-scale-y: 1.05; /* Aumentar el tamaño vertical de la imagen */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Blackjack</h1>
+
+    <div class="balance">
+      <p>Apuesta actual: $<span id="current-bet">0</span></p>
+      <div class="bet-controls">
+        <button class="bet-button" data-amount="1">+1</button>
+        <button class="bet-button" data-amount="10">+10</button>
+        <button class="bet-button" data-amount="50">+50</button>
+        <button class="bet-button" data-amount="100">+100</button>
+        <button id="clear-bet">Limpiar Apuesta</button>
+      </div>
+      <p>Saldo: $<span id="balance">0.00</span></p>
+    </div>
+
+    <div class="dealer">
+      <h2>Repartidor</h2>
+      <div class="cards" id="dealer-cards"></div>
+      <p>Puntaje: <span id="dealer-score">0</span></p>
+    </div>
+
+    <div class="player">
+      <h2>Tú</h2>
+      <div class="cards" id="player-cards"></div>
+      <p>Puntaje: <span id="player-score">0</span></p>
+    </div>
+
+    <div class="controls">
+      <button id="hit">Pedir</button>
+      <button id="stand">Plantarse</button>
+      <button id="restart">Reiniciar</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

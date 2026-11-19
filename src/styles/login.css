@@ -1,0 +1,129 @@
+/* Define color variables for consistency and maintainability */
+.root {
+    /* Color palette */
+    -main-bg-start: #1a1a1a;
+    -main-bg-end: #2c2c2c;
+    -primary-gold-start: #ffd700;
+    -primary-gold-end: #b8860b;
+    -accent-green-start: #28a745;
+    -accent-green-end: #1e7e34;
+    -text-field-bg: #333333;
+    -text-field-bg-focused: #444444;
+    -border-color: #555555;
+    -shadow-color: rgba(0, 0, 0, 0.5);
+    -highlight-shadow: rgba(255, 215, 0, 0.4);
+
+    /* Root styling */
+    -fx-background-color: linear-gradient(to bottom, -main-bg-start, -main-bg-end);
+    -fx-alignment: center;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(gaussian, -shadow-color, 8, 0, 0, 2); /* Reduced shadow for performance */
+}
+
+/* Title styling with improved typography */
+.title {
+    -fx-font-size: 32px; /* Slightly smaller for balance */
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(to bottom, -primary-gold-start, -primary-gold-end);
+    -fx-font-family: "Georgia", "Times New Roman", serif; /* Added fallback fonts */
+    -fx-padding: 20px 0 30px 0;
+    -fx-effect: dropshadow(gaussian, -highlight-shadow, 15, 0, 0, 2); /* Subtle shadow */
+    -fx-letter-spacing: 1.5px; /* Slightly reduced for readability */
+}
+
+/* Text field styling with improved accessibility */
+.text-field {
+    -fx-background-color: -text-field-bg;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #bbbbbb; /* Lighter for better contrast */
+    -fx-border-color: -border-color;
+    -fx-border-radius: 8px; /* Consistent radius */
+    -fx-background-radius: 8px;
+    -fx-padding: 12px; /* Slightly reduced for balance */
+    -fx-font-size: 15px; /* Slightly smaller for consistency */
+    -fx-effect: innershadow(gaussian, -highlight-shadow, 6, 0, 0, 1); /* Subtle shadow */
+}
+
+.text-field:focused {
+    -fx-border-color: linear-gradient(to right, -primary-gold-start, -primary-gold-end);
+    -fx-background-color: -text-field-bg-focused;
+    -fx-effect: dropshadow(gaussian, -highlight-shadow, 10, 0, 0, 2);
+    -fx-scale-x: 1.015; /* Reduced scale for subtlety */
+    -fx-scale-y: 1.015;
+    /* Smooth transition for focus */
+    -fx-transition: -fx-border-color 0.3s ease, -fx-background-color 0.3s ease, -fx-scale-x 0.3s ease, -fx-scale-y 0.3s ease;
+}
+
+/* Login button styling with accessibility and polish */
+.login-btn {
+    -fx-background-color: linear-gradient(to bottom, -accent-green-start, -accent-green-end);
+    -fx-text-fill: linear-gradient(to bottom, -primary-gold-start, -primary-gold-end);
+    -fx-font-size: 16px; /* Slightly smaller for balance */
+    -fx-font-weight: bold;
+    -fx-padding: 12px 36px; /* Adjusted for better proportions */
+    -fx-background-radius: 10px; /* Consistent radius */
+    -fx-border-radius: 10px;
+    -fx-border-color: -primary-gold-start;
+    -fx-border-width: 1.5px; /* Slightly thinner for elegance */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, -highlight-shadow, 8, 0, 0, 2);
+    /* Smooth transition for hover and focus */
+    -fx-transition: -fx-background-color 0.3s ease, -fx-scale-x 0 pi.3s ease, -fx-scale-y 0.3s ease, -fx-effect 0.3s ease;
+}
+
+.login-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #218838, #1a6d2f);
+    -fx-scale-x: 1.03; /* Reduced scale for subtlety */
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, -highlight-shadow, 12, 0, 0, 2);
+}
+
+.login-btn:pressed {
+    -fx-background-color: linear-gradient(to bottom, #1e7e34, #166127);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+    -fx-effect: innershadow(gaussian, -shadow-color, 4, 0, 0, 1);
+}
+
+.login-btn:focused {
+    -fx-border-color: linear-gradient(to right, -primary-gold-start, -primary-gold-end);
+    -fx-effect: dropshadow(gaussian, -highlight-shadow, 12, 0, 0, 2);
+    /* Outline for accessibility */
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Alert styling for better visibility and consistency */
+.alert .content {
+    -fx-text-fill: -primary-gold-start; /* Consistent gold color */
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial", sans-serif; /* Modern, accessible font */
+}
+
+.alert .header-text {
+    -fx-text-fill: -primary-gold-start;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.alert .button-bar .button {
+    -fx-background-color: -accent-green-start;
+    -fx-text-fill: -primary-gold-start;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+    -fx-transition: -fx-background-color 0.3s ease;
+}
+
+.alert .button-bar .button:hover {
+    -fx-background-color: #218838;
+}
+
+.alert .button-bar .button:focused {
+    -fx-border-color: -primary-gold-start;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, -highlight-shadow, 8, 0, 0, 1);
+}

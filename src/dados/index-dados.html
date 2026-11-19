@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Dados - Par o Impar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Juego de Dados - Par o Impar</h1>
+
+        <div class="balance-info">
+            <p id="balanceDisplay">Saldo: $0.00</p>
+            <div class="bet-input">
+                <label for="betAmount">Apuesta: $</label>
+                <input type="number" id="betAmount" value="0" min="1" step="1">
+            </div>
+        </div>
+
+        <div class="dice-container">
+            <div id="dice" class="dice"></div>
+        </div>
+
+        <div class="controls">
+            <button id="btnPar" class="btn btn-par">Par</button>
+            <button id="btnImpar" class="btn btn-impar">Impar</button>
+            <button id="btnRoll" class="btn btn-roll">Lanzar Dado</button>
+        </div>
+
+        <div id="resultDisplay" class="result">Cargando saldo...</div>
+
+        <div class="history">
+            <h2>Historial de Jugadas</h2>
+            <div id="historyList">
+                <div class="history-item">No hay jugadas registradas</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="dados.js"></script>
+</body>
+</html>

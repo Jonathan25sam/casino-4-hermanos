@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tragaperras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Precarga de imágenes -->
+  <link rel="preload" href="img/cherry.png" as="image">
+  <link rel="preload" href="img/clover.png" as="image">
+  <link rel="preload" href="img/diamond.png" as="image">
+  <link rel="preload" href="img/lemon.png" as="image">
+  <link rel="preload" href="img/orange.png" as="image">
+  <link rel="preload" href="img/seven.png" as="image">
+</head>
+<body>
+  <div class="machine">
+    <h2>Tragaperras</h2>
+    <div id="win-display"></div>
+    <div class="balance">Dinero disponible: <span id="balance">0.00</span> $</div>
+    <div class="slots">
+      <div class="slot" id="slot1"><img src="img/cherry.png" alt="cereza"></div>
+      <div class="slot" id="slot2"><img src="img/lemon.png" alt="limón"></div>
+      <div class="slot" id="slot3"><img src="img/diamond.png" alt="diamante"></div>
+    </div>
+    <div class="bet-display">Apuesta: <span id="betAmount">0</span> $</div>
+    <div class="bet-table" id="betTable"></div>
+    <div class="chip-buttons">
+            <button class="chip" data-value="1">1</button>
+      <button class="chip" data-value="10">10</button>
+      <button class="chip" data-value="50">50</button>
+      <button class="chip" data-value="100">100</button>
+      <button class="chip" data-value="500">500</button>
+      <button class="chip" data-value="1000">1000</button>
+      <button class="clear-btn">Limpiar apuesta</button>
+    </div>
+    <button class="spin-btn" id="spinBtn" disabled>Girar</button>
+    <div class="message" id="message"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

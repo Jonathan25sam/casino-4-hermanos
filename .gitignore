@@ -1,0 +1,6 @@
+build/
+dist/
+nbproject/private/
+Librerias/javafx-sdk-*/
+*.class
+ticket_retiro*.pdf

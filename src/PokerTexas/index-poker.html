@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Texas Hold'em</title>
+    <link rel="stylesheet" href="styles-poker.css">
+</head>
+<body>
+    <div class="poker-table">
+        <div class="table-title">POKER TEXAS HOLD'EM</div>
+        
+        <div class="balance-display">Saldo: $<span id="balance">0</span></div>
+        
+        <div class="dealer-section">
+            <div class="dealer-label">Dealer</div>
+            <div class="dealer-cards" id="dealerCards"></div>
+        </div>
+        
+        <div class="community-cards" id="communityCards">
+            <!-- Community cards will be placed here -->
+        </div>
+        
+        <div class="player-section">
+            <div class="player-label">Tu mano</div>
+            <div class="player-cards" id="playerCards"></div>
+            
+            <div class="hand-result" id="handResult"></div>
+        </div>
+        
+        <div class="controls">
+            <div class="bet-controls">
+                <button id="decreaseBet" class="btn btn-action">-</button>
+                <input type="number" id="betAmount" min="10" max="1000" step="10" value="50">
+                <button id="increaseBet" class="btn btn-action">+</button>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="dealBtn" class="btn btn-deal">Repartir</button>
+                <button id="foldBtn" class="btn btn-fold" disabled>Retirarse</button>
+                <button id="callBtn" class="btn btn-call" disabled>Igualar</button>
+                <button id="raiseBtn" class="btn btn-raise" disabled>Subir</button>
+            </div>
+        </div>
+        
+        <div class="game-status" id="gameStatus">
+            Bienvenido al Poker Texas Hold'em. ¡Haz tu apuesta y presiona "Repartir" para comenzar!
+        </div>
+        
+        <div class="history-container">
+            <h3>Historial de manos</h3>
+            <div class="history" id="historyList">
+                <!-- Game history will be displayed here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="poker.js"></script>
+</body>
+</html>
